@@ -42,8 +42,7 @@ class Selection(object):
         pygame.draw.rect(surface,color,[x1,y1,x_len,y_len],size)
 
         self.update((x1,y1,x2,y2))
-        
-
+       
 soliders = [Unit(Vector(width/2,height/2)) for i in range(1)]
 
 def game_loop():
@@ -91,8 +90,6 @@ def game_loop():
                 if event.key == pygame.K_RSHIFT or pygame.K_LSHIFT:
                     shift = False
 
-
-    
         gameDisplay.fill(white)
 
         # Draws the selection box to the screen
@@ -116,7 +113,6 @@ def game_loop():
                 if move_click != None:
                     solider.command_move(move_click,queue=shift)
     
-        
         pygame.display.update()
         clock.tick(60)
 
