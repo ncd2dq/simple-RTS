@@ -10,7 +10,6 @@ RED   = (255,0,0)
 BLUE  = (0,0,255)
 GREEN = (0,255,0)
 
-
 class Unit(object):
     
     def __init__(self,position,team=RED):
@@ -27,7 +26,6 @@ class Unit(object):
         # Relevant to the command_attack method
         self.attacking = False
         self.target_enemy = 0  # not really sure what to put here
-
 
     def update(self,accuracy=10,speed=5):
         '''If we have not reached the target and there are moves in the queue, move to target
